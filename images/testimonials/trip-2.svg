@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="City getaway trip photo placeholder">
+  <defs>
+    <linearGradient id="t2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cfe0f7"/>
+      <stop offset="1" stop-color="#a9c4ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#t2)"/>
+  <circle cx="640" cy="120" r="55" fill="#f3aa3d"/>
+  <rect x="120" y="240" width="90" height="230" fill="#3a5fc4"/>
+  <rect x="230" y="180" width="110" height="290" fill="#2b4796"/>
+  <rect x="360" y="280" width="80" height="190" fill="#5b7fd6"/>
+  <rect x="460" y="210" width="120" height="260" fill="#3a5fc4"/>
+  <rect x="600" y="300" width="90" height="170" fill="#2b4796"/>
+  <g fill="#f3aa3d" opacity="0.9">
+    <rect x="245" y="210" width="16" height="18"/><rect x="285" y="210" width="16" height="18"/>
+    <rect x="245" y="260" width="16" height="18"/><rect x="285" y="260" width="16" height="18"/>
+    <rect x="485" y="240" width="16" height="18"/><rect x="525" y="240" width="16" height="18"/>
+  </g>
+  <text x="400" y="515" text-anchor="middle" font-family="Poppins, sans-serif" font-size="22" fill="#fff" font-weight="700">Trip photo</text>
+</svg>

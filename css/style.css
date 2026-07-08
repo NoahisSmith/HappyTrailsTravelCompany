@@ -1,0 +1,423 @@
+/* ===========================================================================
+   Happy Trails Travel — stylesheet
+   Palette: warm & adventurous (earthy green + terracotta on warm off-white)
+   =========================================================================== */
+
+:root {
+  --green:        #3a5fc4;  /* logo blue (primary) */
+  --green-dark:   #2b4796;  /* deep blue (headings, footer, banners) */
+  --green-light:  #e9eef9;  /* soft blue tint (section backgrounds) */
+  --terracotta:   #f3aa3d;  /* logo golden yellow (accent) */
+  --terracotta-dark: #c47d1c; /* deep gold (text on light, hovers) */
+  --bg:           #faf7f1;
+  --surface:      #ffffff;
+  --text:         #2b2b28;
+  --muted:        #6b6b63;
+  --border:       #e7ded2;
+  --shadow:       0 6px 20px rgba(45, 40, 30, 0.08);
+  --radius:       14px;
+  --maxw:         1100px;
+}
+
+/* --- Reset / base ------------------------------------------------------- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: "Poppins", system-ui, sans-serif;
+  line-height: 1.2;
+  color: var(--green-dark);
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 1em; }
+
+a { color: var(--green); }
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.section { padding: 4rem 0; }
+.section--tight { padding: 2.5rem 0; }
+.text-center { text-align: center; }
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 60ch;
+}
+.lead.text-center { margin-inline: auto; }
+
+/* --- Buttons ----------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  background: var(--green);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  border-radius: 999px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+.btn:hover { background: var(--green-dark); }
+.btn:active { transform: translateY(1px); }
+
+.btn--ghost {
+  background: transparent;
+  color: var(--green-dark);
+  border: 2px solid var(--green);
+}
+.btn--ghost:hover { background: var(--green-light); }
+
+/* --- Header / nav ------------------------------------------------------ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(250, 246, 240, 0.95);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--border);
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.85rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--green-dark);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand__logo { height: 44px; width: auto; display: block; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0.4rem;
+  width: 44px;
+  height: 44px;
+}
+.nav-toggle__bar,
+.nav-toggle__bar::before,
+.nav-toggle__bar::after {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--green-dark);
+  border-radius: 2px;
+  position: relative;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav-toggle__bar::before,
+.nav-toggle__bar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+.nav-toggle__bar::before { top: -8px; }
+.nav-toggle__bar::after  { top: 8px; }
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.main-nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+.main-nav a:hover { color: var(--green); }
+.main-nav a[aria-current="page"] {
+  color: var(--green-dark);
+  border-bottom-color: var(--terracotta);
+}
+
+/* --- Hero -------------------------------------------------------------- */
+.hero {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  background:
+    linear-gradient(rgba(43, 71, 150, 0.62), rgba(43, 71, 150, 0.62)),
+    url("../images/hero.svg") center / cover no-repeat;
+}
+.hero__inner {
+  padding-block: clamp(4rem, 12vw, 8rem);
+  max-width: 760px;
+  margin-inline: auto;
+}
+.hero h1 { color: #fff; }
+.hero p {
+  font-size: 1.2rem;
+  color: #f4efe7;
+  margin-bottom: 1.8rem;
+}
+.hero__cta { display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap; }
+.hero .btn { background: var(--terracotta); color: var(--green-dark); }
+.hero .btn:hover { background: var(--terracotta-dark); color: #fff; }
+.hero .btn--ghost { background: transparent; color: #fff; border-color: #fff; }
+.hero .btn--ghost:hover { background: rgba(255, 255, 255, 0.15); }
+
+/* Compact page banner for inner pages */
+.page-banner {
+  background: var(--green-dark);
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0;
+}
+.page-banner h1 { color: #fff; margin-bottom: 0.3rem; }
+.page-banner p { color: #d9e6dd; margin: 0; }
+
+/* --- Cards / grids ----------------------------------------------------- */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+}
+.card img { width: 100%; height: 170px; object-fit: cover; }
+.card__body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+.card__body h3 { color: var(--green-dark); }
+.card__body p { color: var(--muted); flex: 1; }
+.card__link {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  color: var(--terracotta-dark);
+  text-decoration: none;
+}
+.card__link:hover { text-decoration: underline; }
+
+/* --- Testimonials ------------------------------------------------------ */
+.stars {
+  color: var(--terracotta);
+  letter-spacing: 3px;
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+.card__body p.quote {
+  font-style: italic;
+  color: var(--text);
+  position: relative;
+}
+.attribution { margin-top: 0.9rem; }
+.attribution__name {
+  display: block;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+.attribution__trip {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* --- Feature / split rows --------------------------------------------- */
+.feature {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+.feature img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.feature--alt { background: var(--green-light); }
+.feature:nth-child(even) .feature__media { order: 2; }
+
+/* --- Why-us strip ------------------------------------------------------ */
+.bg-soft { background: var(--green-light); }
+.stats {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  text-align: center;
+}
+.stat__num {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--terracotta-dark);
+  line-height: 1;
+}
+.stat__label { color: var(--muted); margin: 0.4rem 0 0; }
+
+/* --- Service detail sections ------------------------------------------ */
+.service-row {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  padding: 2.5rem 0;
+  border-bottom: 1px solid var(--border);
+  /* keep anchored sections (#vacations etc.) clear of the sticky header */
+  scroll-margin-top: 90px;
+}
+.service-row:last-child { border-bottom: 0; }
+.service-row img { border-radius: var(--radius); box-shadow: var(--shadow); }
+.service-row:nth-child(even) .service-row__media { order: 2; }
+
+/* --- CTA band ---------------------------------------------------------- */
+.cta-band {
+  background: var(--terracotta);
+  color: var(--green-dark);
+  text-align: center;
+}
+.cta-band h2 { color: var(--green-dark); }
+.cta-band p { color: #5a4a1e; max-width: 55ch; margin-inline: auto; }
+.cta-band .btn { background: var(--green); color: #fff; }
+.cta-band .btn:hover { background: var(--green-dark); }
+
+/* --- Contact / form ---------------------------------------------------- */
+.contact-grid {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: start;
+}
+.form-field { margin-bottom: 1.1rem; }
+.form-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: var(--green-dark);
+}
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+  background: var(--surface);
+  color: var(--text);
+}
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: 2px solid var(--green);
+  outline-offset: 1px;
+  border-color: var(--green);
+}
+.form-field textarea { resize: vertical; min-height: 130px; }
+
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+}
+.info-card h3 { margin-top: 0; }
+.info-item { margin-bottom: 1rem; }
+.info-item span { display: block; font-weight: 700; color: var(--green-dark); }
+.info-item a { color: var(--terracotta-dark); text-decoration: none; }
+.info-item a:hover { text-decoration: underline; }
+
+/* --- Footer ------------------------------------------------------------ */
+.site-footer {
+  background: var(--green-dark);
+  color: #dfeae2;
+  padding: 2.5rem 0 1.75rem;
+}
+.site-footer a { color: #fff; }
+.site-footer__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 3rem;
+  justify-content: space-between;
+}
+.site-footer h4 {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  margin: 0 0 0.5rem;
+}
+.site-footer__bottom {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.9rem;
+  color: #b9ccbf;
+}
+
+/* --- Responsive -------------------------------------------------------- */
+@media (max-width: 760px) {
+  .nav-toggle { display: block; }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    display: none;
+  }
+  .main-nav.is-open { display: block; }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem 1.25rem 1rem;
+  }
+  .main-nav li { border-bottom: 1px solid var(--border); }
+  .main-nav li:last-child { border-bottom: 0; }
+  .main-nav a { display: block; padding: 0.85rem 0; }
+
+  .feature,
+  .service-row,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  /* keep natural source order on mobile */
+  .feature:nth-child(even) .feature__media,
+  .service-row:nth-child(even) .service-row__media { order: 0; }
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | Happy Trails Travel</title>
+  <meta name="description" content="Reviews from Happy Trails Travel clients — real stories and photos from stress-free vacations, romantic getaways, destination weddings, and cruises.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo-small.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <img class="brand__logo" src="images/logo-small.png" alt="">
+        Happy Trails Travel
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav class="main-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="testimonials.html" aria-current="page">Testimonials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <h1>Traveler Testimonials</h1>
+        <p>Real trips, happy travelers — here's what clients have to say.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="grid">
+
+          <!-- =====================================================================
+               HOW TO ADD A NEW TESTIMONIAL
+               Copy one <article class="card"> ... </article> block below and edit:
+                 1. img src  -> a trip photo in images/testimonials/ (or remove the
+                    <img> line for a text-only review)
+                 2. the star count in .stars (★ = filled, ☆ = empty)
+                 3. the .quote text  (the client's words)
+                 4. .attribution__name  (client name) and .attribution__trip
+                    (trip type / destination)
+               The cards arrange themselves automatically in the grid.
+               ===================================================================== -->
+
+          <article class="card">
+            <img src="images/testimonials/trip-1.svg" alt="A client's trip">
+            <div class="card__body">
+              <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+              <p class="quote">"Such a great travel agent and experience for our cruise. Reach out to book your next vacation with Shonda. From booking flights and hotels with ease!"</p>
+              <p class="attribution">
+                <span class="attribution__name">Deb</span>
+                <span class="attribution__trip">Stress-free Vacation · Cabo San Lucas, Mexico</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/testimonials/trip-2.svg" alt="A client's trip">
+            <div class="card__body">
+              <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+              <p class="quote">"Our honeymoon was absolutely perfect. She listened to exactly what we wanted and surprised us with little touches along the way. Stress-free from start to finish."</p>
+              <p class="attribution">
+                <span class="attribution__name">Maria &amp; Tom</span>
+                <span class="attribution__trip">Romantic Getaway · Italy</span>
+              </p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="images/testimonials/trip-3.svg" alt="A client's trip">
+            <div class="card__body">
+              <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+              <p class="quote">"Booking a cruise for our whole family seemed overwhelming until we called Happy Trails. Everyone was on the same itinerary and taken care of. Highly recommend!"</p>
+              <p class="attribution">
+                <span class="attribution__name">The Becker Group</span>
+                <span class="attribution__trip">Group &amp; Cruise Travel · Alaska</span>
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <div class="container">
+        <h2>Ready to write your own story?</h2>
+        <p>Let's plan a trip you'll be raving about, too.</p>
+        <p style="margin-top:1.5rem;"><a class="btn" href="contact.html">Start Planning</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h4>Happy Trails Travel</h4>
+          <p>Stress-free vacations, romantic getaways, destination weddings &amp; more.</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>
+            <a href="tel:+15155542798">(515) 554-2798</a><br>
+            <a href="mailto:shondapivonka@gmail.com">shondapivonka@gmail.com</a><br>
+            Stuart, IA<br>
+            <a href="https://www.facebook.com/profile.php?id=100043407884008" target="_blank" rel="noopener">Facebook</a>
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <p>
+            <a href="index.html">Home</a><br>
+            <a href="about.html">About</a><br>
+            <a href="services.html">Services</a><br>
+            <a href="testimonials.html">Testimonials</a><br>
+            <a href="contact.html">Contact</a>
+          </p>
+        </div>
+      </div>
+      <p class="site-footer__bottom">© <span id="year">2026</span> Happy Trails Travel · Stuart, IA</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
