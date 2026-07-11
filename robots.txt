@@ -1,0 +1,8 @@
+# robots.txt for Happy Trails Travel
+# Replace REPLACE-WITH-YOUR-DOMAIN with your live site URL once published,
+# e.g. https://your-username.github.io/HappyTrailsTravelCompany
+
+User-agent: *
+Allow: /
+
+Sitemap: https://REPLACE-WITH-YOUR-DOMAIN/sitemap.xml
