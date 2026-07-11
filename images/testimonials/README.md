@@ -7,7 +7,7 @@ alongside them.
 | File                 | Used by            | Status                                    |
 |----------------------|--------------------|-------------------------------------------|
 | `trip-1-810x540.jpg` | First review card  | Real photo (Ensenada sign; original: `trip-1.jpg`) |
-| `trip-2.svg`         | Second review card | Placeholder — replace with a real client photo |
+| `trip-2-810x540.jpg` | Second review card | Real photo (Venice rooftops; original: `trip-2.jpg`) |
 | `trip-3.svg`         | Third review card  | Placeholder — replace with a real client photo |
 
 Tips:
