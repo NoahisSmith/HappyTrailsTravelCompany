@@ -1,17 +1,17 @@
 # Testimonial photos
 
-Placeholder trip photos for the testimonials page. Replace them with real client
-trip photos (with the client's permission) by keeping the same file names, or add
-new ones and point to them in `testimonials.html`.
+Trip photos for the testimonials page. The pages serve web-optimized
+`*-810x540.jpg` copies; full-size originals (e.g. `trip-1.jpg`) can live here
+alongside them.
 
-| File          | Used by              | Suggested replacement                     |
-|---------------|----------------------|-------------------------------------------|
-| `trip-1.svg`  | First review card    | A real client trip photo (~4:3 ratio)     |
-| `trip-2.svg`  | Second review card   | A real client trip photo                  |
-| `trip-3.svg`  | Third review card    | A real client trip photo                  |
+| File                 | Used by            | Status                                    |
+|----------------------|--------------------|-------------------------------------------|
+| `trip-1-810x540.jpg` | First review card  | Real photo (Ensenada sign; original: `trip-1.jpg`) |
+| `trip-2.svg`         | Second review card | Placeholder — replace with a real client photo |
+| `trip-3.svg`         | Third review card  | Placeholder — replace with a real client photo |
 
 Tips:
 - Web-optimize photos (ideally under ~400 KB each) so the page loads fast.
-- If you use JPG/PNG, name them e.g. `trip-1.jpg` and update the `<img src="...">`
-  in `testimonials.html`.
+- Photos look best around a 3:2 ratio (e.g. 810×540).
+- After adding a photo, update the `<img src="...">` in `testimonials.html`.
 - Always get the traveler's OK before posting their photo or name.

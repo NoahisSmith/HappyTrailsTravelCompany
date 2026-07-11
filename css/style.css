@@ -380,6 +380,19 @@ img { max-width: 100%; display: block; }
   color: #fff;
   margin: 0 0 0.5rem;
 }
+.social-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+.social-links img {
+  width: 26px;
+  height: 26px;
+  /* branding icons are black; render them white on the dark footer */
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s ease;
+}
+.social-links a:hover img { opacity: 0.75; }
 .site-footer__bottom {
   margin-top: 1.75rem;
   padding-top: 1.25rem;

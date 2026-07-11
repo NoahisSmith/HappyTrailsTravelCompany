@@ -1,23 +1,31 @@
 # Images
 
-These are **placeholder** illustrations (simple SVGs) so the site looks complete
-right away. Swap them with real photos whenever you're ready — just keep the same
-file names and the pages will pick them up automatically.
+## Folders
 
-| File            | Used on                          | Suggested replacement                          |
-|-----------------|----------------------------------|------------------------------------------------|
-| `hero.svg`      | Home hero background             | A wide, scenic travel photo (landscape, ~1600×900) |
-| `vacations.svg` | Home + Services "Vacations"      | Beach / resort / family vacation photo         |
-| `romantic.svg`  | Home + Services "Romantic"       | Couple / honeymoon / sunset photo              |
-| `weddings.svg`  | Home + Services "Weddings"       | Destination wedding / ceremony photo           |
-| `group.svg`     | Home + Services "Group & Cruise" | Cruise ship / group tour photo                 |
-| `about.svg`     | About page                       | A friendly headshot or trip-planning photo     |
+- `logo/` — brand logos and favicons (the pages use the `NoText` sizes; the
+  1024px and `Travel` versions are for social media / print).
+- `branding/` — social network icons shown in the footer (rendered white via CSS).
+- `services/` — service photos. The pages use the optimized `*-810x540.jpg`
+  copies; the `*-1620x1080.png` files are the full-size originals.
+- `testimonials/` — trip photos for the testimonials page (see its README).
 
-## Tips for swapping in photos
+## Loose files
 
-- If you use JPG/PNG instead of SVG, name them e.g. `hero.jpg`, then update the
-  reference in the HTML (and the `hero.svg` URL inside `css/style.css` for the
-  hero background).
-- Keep photos reasonably sized (web-optimized, ideally under ~400 KB each) so the
-  site loads fast on phones.
-- Card/service images look best around a 4:3 or 3:2 ratio.
+- `about.jpg` — full-size About page photo (original); the page serves the
+  optimized `about-web.jpg` copy.
+
+## Remaining placeholders
+
+| File        | Used on              | Suggested replacement                          |
+|-------------|----------------------|------------------------------------------------|
+| `hero.svg`  | Home hero background | A wide, scenic travel photo (landscape, ~1600×900) |
+
+To swap `hero.svg`: add your photo (e.g. `hero.jpg`) and update the
+`url("../images/hero.svg")` reference in `css/style.css`.
+
+## Tips
+
+- Keep page-served photos web-optimized (ideally under ~400 KB each) so the
+  site loads fast on phones. Full-size originals are fine to keep in the repo —
+  they just shouldn't be referenced by the pages.
+- Card/service images look best around a 3:2 ratio (e.g. 810×540).

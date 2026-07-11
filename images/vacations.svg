@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Beach vacation scene">
-  <rect width="800" height="560" fill="#bfe3e0"/>
-  <circle cx="650" cy="120" r="70" fill="#fbe3b3"/>
-  <rect y="360" width="800" height="200" fill="#e9d6a8"/>
-  <path d="M0 360 Q200 320 400 360 T800 360 L800 420 L0 420 Z" fill="#7fc7c2"/>
-  <path d="M150 360 C150 300 170 250 150 210 M150 220 C120 200 90 205 80 230 M150 220 C180 200 215 205 225 235 M150 240 C120 225 95 235 90 262 M150 240 C185 225 210 235 218 262" stroke="#2b4796" stroke-width="9" fill="none" stroke-linecap="round"/>
-  <text x="400" y="500" text-anchor="middle" font-family="Poppins, sans-serif" font-size="30" fill="#2b4796" font-weight="700">Stress-free Vacations</text>
-</svg>
